@@ -44,7 +44,7 @@ grails.project.dependency.resolution = {
         //mavenRepo "http://repository.codehaus.org"
         //mavenRepo "http://download.java.net/maven/2/"
         //mavenRepo "http://repository.jboss.com/maven2/"
-        mavenRepo "http://repository.aduna-software.org/maven2/"
+        // mavenRepo "http://repository.aduna-software.org/maven2/"
     }
 
     dependencies {
@@ -52,9 +52,9 @@ grails.project.dependency.resolution = {
         // runtime 'mysql:mysql-connector-java:5.1.29'
         // runtime 'org.postgresql:postgresql:9.3-1101-jdbc41'
         compile "org.springframework:spring-orm:$springVersion"
-        compile "org.openrdf:openrdf-repository-api:2.0.1"
-        compile "org.openrdf:openrdf-rio-rdfxml:2.0.1"
-        compile "org.openrdf:openrdf-model:2.0.1"
+        compile "org.openrdf.sesame:sesame-repository-api:2.7.11"
+        compile "org.openrdf.sesame:sesame-rio-rdfxml:2.7.11"
+        compile "org.openrdf.sesame:sesame-model:2.7.11"
     }
 
     plugins {
