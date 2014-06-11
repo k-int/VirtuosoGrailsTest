@@ -45,6 +45,7 @@ grails.project.dependency.resolution = {
         //mavenRepo "http://download.java.net/maven/2/"
         //mavenRepo "http://repository.jboss.com/maven2/"
         // mavenRepo "http://repository.aduna-software.org/maven2/"
+        mavenRepo "https://repository.apache.org/content/repositories/releases/"
     }
 
     dependencies {
@@ -52,9 +53,16 @@ grails.project.dependency.resolution = {
         // runtime 'mysql:mysql-connector-java:5.1.29'
         // runtime 'org.postgresql:postgresql:9.3-1101-jdbc41'
         compile "org.springframework:spring-orm:$springVersion"
-        compile "org.openrdf.sesame:sesame-repository-api:2.7.11"
-        compile "org.openrdf.sesame:sesame-rio-rdfxml:2.7.11"
-        compile "org.openrdf.sesame:sesame-model:2.7.11"
+
+        // Experiment with sesame API
+        // compile "org.openrdf.sesame:sesame-repository-api:2.7.11"
+        // compile "org.openrdf.sesame:sesame-rio-rdfxml:2.7.11"
+        // compile "org.openrdf.sesame:sesame-model:2.7.11"
+
+
+        // Experiment with JENA API (Via Groovy Sparql API)
+        // compile 'com.github.albaker:GroovySparql:0.7.2'
+        compile 'org.apache.jena:jena-tdb:1.0.2'
     }
 
     plugins {
@@ -76,5 +84,6 @@ grails.project.dependency.resolution = {
         //compile ":less-asset-pipeline:1.7.0"
         //compile ":coffee-asset-pipeline:1.7.0"
         //compile ":handlebars-asset-pipeline:1.3.0.3"
+
     }
 }
