@@ -26,12 +26,12 @@ git clone https://github.com/openlink/virtuoso-opensource.git
 
  apt-get autoremove
 
-apt-get install dpkg-dev build-essential autoconf automake bison build-essential checkinstall flex gawk gperf libiodbc2 libiodbc2-dev libssl-dev libtool python-dev
+apt-get install dpkg-dev build-essential autoconf automake bison build-essential checkinstall flex gawk gperf libiodbc2 libiodbc2-dev libssl-dev libtool python-dev unixodbc
 
 cd virt...
 
 ./autogen.sh
-./configure --with-layout-debian
+./configure --with-layout=debian
 make
 make install
 
